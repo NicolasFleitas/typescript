@@ -84,3 +84,34 @@ function retornoUndefined() {
 // si por algun motivo nuestra funcion retorna null o undefined
 // podemos incluirla en la firma de la funcion
 // Por buenas practicas se utiliza undefined
+// FUNCIONES EN TYPESCRIPT
+// se utiliza ? luego de la variable para indicar 
+// que puede ser un parametro opcional en la funcion
+function saludo(nombre) {
+    if (nombre) {
+        return 'Hola ' + nombre;
+    }
+    return '¡Hola!';
+}
+console.log(saludo(nombreCompleto));
+console.log(saludo());
+console.log('ARREGLOS');
+// AREGLOS EN TYPESCRIPT
+var cursos;
+cursos = ['TypeScript', 'Angular'];
+// ARREGLOS CON GENERICS
+var nombres;
+nombres = ['Rebecca Rodriguez', 'Nicolas Fleitas'];
+var arreglo = [2, 'cadena', true]; // combinacion de tipos inferidos
+// Tuplas
+// array de tipos
+var infoCursos = ['typescript', 100];
+var curso = ['typescript', 150, '31/10/2019'];
+console.log('curso', curso);
+var nuevosInscritos = 10;
+console.log('Fecha de inicio', (curso[2]));
+console.log('Total de inscriptos', (curso[1] + nuevosInscritos));
+var tuplaTest = ['a', 'b'];
+var tuplaTemp = ['c', 'd'];
+tuplaTemp = tuplaTest;
+console.log('tuplaTemp', tuplaTemp);

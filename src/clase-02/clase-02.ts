@@ -127,3 +127,52 @@ function retornoUndefined(): undefined {
 // Por buenas practicas se utiliza undefined
 
 
+// FUNCIONES EN TYPESCRIPT
+// se utiliza ? luego de la variable para indicar 
+// que puede ser un parametro opcional en la funcion
+function saludo(nombre?: string): string {
+    if(nombre) {
+        return 'Hola ' + nombre;
+    }
+    return '¡Hola!'
+}
+
+console.log(saludo(nombreCompleto));
+
+console.log(saludo());
+
+console.log('ARREGLOS');
+
+// AREGLOS EN TYPESCRIPT
+
+let cursos: string[]; 
+cursos = [ 'TypeScript','Angular'];
+
+// ARREGLOS CON GENERICS
+
+let nombres: Array<string>;
+nombres = ['Rebecca Rodriguez','Nicolas Fleitas'];
+
+let arreglo = [2, 'cadena', true]; // combinacion de tipos inferidos
+
+// Tuplas
+// array de tipos
+
+let infoCursos: [string,number] = ['typescript',100];
+
+let curso: [string,number,string] = ['typescript',150,'31/10/2019'];
+console.log('curso', curso);
+
+let nuevosInscritos = 10;
+
+console.log('Fecha de inicio', (curso[2]));
+console.log('Total de inscriptos', (curso[1]+ nuevosInscritos));
+
+let tuplaTest: [string, string] = ['a','b'];
+let tuplaTemp: [string, string] = ['c','d'];
+
+tuplaTemp = tuplaTest;
+console.log('tuplaTemp',tuplaTemp);
+
+
+
