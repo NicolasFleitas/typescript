@@ -7,23 +7,23 @@ var estaInscripto;
 // nombre de la variable luego el tipo
 estaInscripto = false;
 estaInscripto = true;
-function tieneDescuento(curso) {
-    if (curso === 'typescript') {
-        return true;
-    }
-    return false;
-}
-console.log("tieneDescuento('angular'):", tieneDescuento('angular'));
+// function tieneDescuento(curso): boolean {
+//     if(curso === 'typescript') {
+//         return true;
+//     }        
+//     return false
+// }
+// console.log(`tieneDescuento('angular'):`, tieneDescuento('angular'));
 // NUMBERS
 var estudiantes = 100; // inferido tipo number
 var cantidadEstudiantes; // tipo explicito
 cantidadEstudiantes = 120;
-function getCantidadEstudiantes(curso) {
-    if (curso === 'typescript') {
-        return 100;
-    }
-    return 0;
-}
+// function getCantidadEstudiantes(curso): number {
+//     if (curso === 'typescript') {
+//         return 100;
+//     }
+//     return 0;
+// }
 var inscritosCursoTypescript = 100; // declarar en una linea
 // Type: Number, hexadecimales
 var decimal = 10;
@@ -87,14 +87,14 @@ function retornoUndefined() {
 // FUNCIONES EN TYPESCRIPT
 // se utiliza ? luego de la variable para indicar 
 // que puede ser un parametro opcional en la funcion
-function saludo(nombre) {
-    if (nombre) {
-        return 'Hola ' + nombre;
-    }
-    return '¡Hola!';
-}
-console.log(saludo(nombreCompleto));
-console.log(saludo());
+// function saludo(nombre?: string): string {
+//     if(nombre) {
+//         return 'Hola ' + nombre;
+//     }
+//     return '¡Hola!'
+// }
+// console.log(saludo(nombreCompleto));
+// console.log(saludo());
 console.log('ARREGLOS');
 // AREGLOS EN TYPESCRIPT
 var cursos;

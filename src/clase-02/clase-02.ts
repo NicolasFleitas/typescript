@@ -11,14 +11,14 @@ let estaInscripto: boolean;
 estaInscripto = false; 
 estaInscripto = true; 
 
-function tieneDescuento(curso): boolean {
-    if(curso === 'typescript') {
-        return true;
-    }        
-    return false
-}
+// function tieneDescuento(curso): boolean {
+//     if(curso === 'typescript') {
+//         return true;
+//     }        
+//     return false
+// }
 
-console.log(`tieneDescuento('angular'):`, tieneDescuento('angular'));
+// console.log(`tieneDescuento('angular'):`, tieneDescuento('angular'));
 
 // NUMBERS
 
@@ -27,12 +27,12 @@ let estudiantes = 100; // inferido tipo number
 let cantidadEstudiantes: number; // tipo explicito
 cantidadEstudiantes = 120;
 
-function getCantidadEstudiantes(curso): number {
-    if (curso === 'typescript') {
-        return 100;
-    }
-    return 0;
-}
+// function getCantidadEstudiantes(curso): number {
+//     if (curso === 'typescript') {
+//         return 100;
+//     }
+//     return 0;
+// }
 
 let inscritosCursoTypescript: number = 100; // declarar en una linea
 
@@ -130,16 +130,16 @@ function retornoUndefined(): undefined {
 // FUNCIONES EN TYPESCRIPT
 // se utiliza ? luego de la variable para indicar 
 // que puede ser un parametro opcional en la funcion
-function saludo(nombre?: string): string {
-    if(nombre) {
-        return 'Hola ' + nombre;
-    }
-    return '¡Hola!'
-}
+// function saludo(nombre?: string): string {
+//     if(nombre) {
+//         return 'Hola ' + nombre;
+//     }
+//     return '¡Hola!'
+// }
 
-console.log(saludo(nombreCompleto));
+// console.log(saludo(nombreCompleto));
 
-console.log(saludo());
+// console.log(saludo());
 
 console.log('ARREGLOS');
 

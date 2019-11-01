@@ -62,7 +62,8 @@
   },
 
   "include":[
-    "src/**/*.ts" // doble * para compilar de forma recursiva
+    "src/**/*.ts", // doble * para compilar de forma recursiva
+    "src/clase-03/*.ts" // doble * para compilar de forma recursiva
   ],
   "exclude": [
     "src/test.ts"

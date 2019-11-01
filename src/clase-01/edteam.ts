@@ -1,4 +1,4 @@
-let cursos = ['TypeScript desde cero','Angular avanzado'];
+let cursosx = ['TypeScript desde cero','Angular avanzado'];
 
 console.log('cursos ', cursos);
 
@@ -18,6 +18,6 @@ let codigo = `
 `; 
 console.log('Codigo', codigo);
 
-let curso = 'TypeScript';
-let saludo2 = `Bienvenidos al curso de ${curso}`;
+let cursox = 'TypeScript';
+let saludo2 = `Bienvenidos al curso de ${cursox}`;
 console.log('saludo', saludo2);
