@@ -68,6 +68,26 @@ Salto de linea
 otro salto
 `
 
-console.log('mensaje',mensaje);
+console.log('mensaje',mensaje)
 
-`
+// Tipos especiales en TypeScript
+
+// * Tipo: Any : puede contener cualquier tipo primitivo
+let desconocido; // el tipo any es inferido
+
+desconocido = 'hola';
+desconocido = 2;
+
+let desconocido2: any; // Notación postfija
+
+//Tipo: Void 
+let vacio: void; 
+
+function mostrarContenido(curso: string): void {
+    const mensaje = curso ? `Bienvenido al curso ${curso}` : 'Suscribete al curso!';
+    console.log('mensaje', mensaje);
+}
+
+//console.log('typescript',mostrarContenido('typescript'));
+
+mostrarContenido('typescript');

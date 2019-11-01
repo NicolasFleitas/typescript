@@ -46,4 +46,17 @@ console.log('nombreCompleto2', nombreCompleto2);
 var arregloCursos = ['TypeScript', 'Angular'];
 var mensaje = "\nMi nombre completo es " + nombreCompleto + " y tengo " + arregloCursos.length + " cursos.\nSalto de linea\notro salto\n";
 console.log('mensaje', mensaje);
-"\n";
+// Tipos especiales en TypeScript
+// * Tipo: Any : puede contener cualquier tipo primitivo
+var desconocido; // el tipo any es inferido
+desconocido = 'hola';
+desconocido = 2;
+var desconocido2; // Notación postfija
+//Tipo: Void 
+var vacio;
+function mostrarContenido(curso) {
+    var mensaje = curso ? "Bienvenido al curso " + curso : 'Suscribete al curso!';
+    console.log('mensaje', mensaje);
+}
+//console.log('typescript',mostrarContenido('typescript'));
+mostrarContenido('typescript');
