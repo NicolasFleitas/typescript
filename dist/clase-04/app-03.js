@@ -1,8 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-// MIEMBROS PUBLICOS
-// EN cualquier ambito donde se encuentre el objeto curso
-// Se podra cambiar su estado
+// MIEMBROS PRIVADOS
 var Curso = /** @class */ (function () {
     function Curso(id, nombre) {
         this.id = id;
@@ -12,8 +10,9 @@ var Curso = /** @class */ (function () {
 }());
 var EscuelaDigital = /** @class */ (function () {
     function EscuelaDigital(nombre) {
-        this.cursos = [];
         this.nombre = nombre;
+        // private nombre: string;
+        this.cursos = [];
     }
     EscuelaDigital.prototype.agregarCurso = function (curso) {
         this.cursos.push(curso);
@@ -26,8 +25,8 @@ var cursoTS = new Curso(2, 'TypeScript');
 escuela.agregarCurso(cursoJS);
 escuela.agregarCurso(cursoTS);
 // Acceder a los atributos publicos
-cursoJS.nombre = 'JavaScript desde Cero';
-cursoJS.id = 20;
+// cursoJS.nombre = 'JavaScript desde Cero';
+// cursoJS.id = 20;
 console.log('escuela', escuela);
-console.log('escuela.nombre', escuela.nombre);
-console.log('escuela.curso', escuela.cursos);
+// console.log('escuela.nombre', escuela.nombre); // es private
+// cons

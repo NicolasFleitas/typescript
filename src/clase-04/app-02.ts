@@ -39,6 +39,6 @@ cursoJS.nombre = 'JavaScript desde Cero';
 cursoJS.id = 20;
 console.log('escuela', escuela);
 console.log('escuela.nombre', escuela.nombre);
-//console.log('escuela.curso', escuela.cursos);
+console.log('escuela.curso', escuela.cursos);
 
 
