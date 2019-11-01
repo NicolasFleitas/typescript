@@ -49,3 +49,25 @@ console.log('binario',binario)
 // Type: Number, octal
 let octal: number = 0o755;
 console.log('octal',octal);
+
+let nombre = 'Nicolas';
+let apellido: string = 'Fleitas';
+let nombreCompleto =  nombre + ' ' + apellido;
+console.log('nombreCompleto', nombreCompleto);
+
+// String + ES6 Template literals
+
+let nombreCompleto2 = `${nombre} ${apellido}`;
+console.log('nombreCompleto2', nombreCompleto2);
+
+
+let arregloCursos = ['TypeScript', 'Angular'];
+let mensaje =  `
+Mi nombre completo es ${nombreCompleto} y tengo ${arregloCursos.length} cursos.
+Salto de linea
+otro salto
+`
+
+console.log('mensaje',mensaje);
+
+`

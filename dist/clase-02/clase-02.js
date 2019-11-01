@@ -36,3 +36,14 @@ console.log('binario', binario);
 // Type: Number, octal
 var octal = 493;
 console.log('octal', octal);
+var nombre = 'Nicolas';
+var apellido = 'Fleitas';
+var nombreCompleto = nombre + ' ' + apellido;
+console.log('nombreCompleto', nombreCompleto);
+// String + ES6 Template literals
+var nombreCompleto2 = nombre + " " + apellido;
+console.log('nombreCompleto2', nombreCompleto2);
+var arregloCursos = ['TypeScript', 'Angular'];
+var mensaje = "\nMi nombre completo es " + nombreCompleto + " y tengo " + arregloCursos.length + " cursos.\nSalto de linea\notro salto\n";
+console.log('mensaje', mensaje);
+"\n";
