@@ -60,3 +60,27 @@ function mostrarContenido(curso) {
 }
 //console.log('typescript',mostrarContenido('typescript'));
 mostrarContenido('typescript');
+//Tipo: Never ((Se utiliza mas en una funcion))
+//El tipo indica que potencialmente va a retornar un error
+var nunca;
+function retornaError(error) {
+    throw new Error('Error TypeScript.' + error);
+    // Nunca retorna un valor!
+}
+//retornaError('Valor inesperado');
+function cicloInfinito() {
+    while (true) {
+    }
+}
+// Tipo: Null y Undefinied
+var variableUndefined = undefined;
+var variableNull = null;
+function retornoNull() {
+    return null;
+}
+function retornoUndefined() {
+    return undefined;
+}
+// si por algun motivo nuestra funcion retorna null o undefined
+// podemos incluirla en la firma de la funcion
+// Por buenas practicas se utiliza undefined
