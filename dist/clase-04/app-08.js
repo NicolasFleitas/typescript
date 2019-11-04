@@ -17,6 +17,12 @@ Object.defineProperty(exports, "__esModule", { value: true });
 // MODiFICADORES DE ACCESO: PROTECTED
 // CLASES ABSTRACTAS 
 // ATRIBUTOS Y METODOS ESTATICOS
+var MisCursos;
+(function (MisCursos) {
+    MisCursos[MisCursos["JavaScript"] = 0] = "JavaScript";
+    MisCursos[MisCursos["TypeScript"] = 1] = "TypeScript";
+    MisCursos[MisCursos["Angular"] = 2] = "Angular";
+})(MisCursos || (MisCursos = {}));
 var Curso = /** @class */ (function () {
     function Curso(_id, _nombre) {
         this._id = _id;
@@ -36,6 +42,10 @@ var Curso = /** @class */ (function () {
         enumerable: true,
         configurable: true
     });
+    Curso.getInfo = function (c) {
+        return JSON.stringify(c);
+    };
+    Curso.cursosDisponibles = [MisCursos.JavaScript, MisCursos.TypeScript];
     return Curso;
 }());
 // superclase escuela
@@ -100,3 +110,6 @@ console.log('nombre cursoJS', cursoJS.nombre); // Leyendo: GET
 console.log('escuela', escuela);
 console.log('escuela.nombre', escuela.nombre);
 console.log('escuela.paginaWeb', escuela.paginaWeb);
+//
+console.log('MisCursos', Curso.cursosDisponibles);
+console.log('CursoJS', Curso.getInfo(cursoJS));

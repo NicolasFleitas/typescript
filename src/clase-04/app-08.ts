@@ -5,7 +5,15 @@ export {};
 // CLASES ABSTRACTAS 
 // ATRIBUTOS Y METODOS ESTATICOS
 
-class Curso {      
+enum MisCursos {
+    JavaScript = 0,
+    TypeScript = 1,
+    Angular = 2
+}
+
+class Curso {     
+    public static cursosDisponibles: MisCursos[] = [MisCursos.JavaScript, MisCursos.TypeScript];
+
     constructor(private readonly _id: number, private readonly _nombre: string) {        
     }   
     
@@ -16,6 +24,10 @@ class Curso {
 
     get nombre() {
         return this._nombre;
+    }
+
+    static getInfo(c: Curso) {
+        return JSON.stringify(c)
     }
 }
 
@@ -84,3 +96,7 @@ console.log('nombre cursoJS', cursoJS.nombre); // Leyendo: GET
 console.log('escuela', escuela);
 console.log('escuela.nombre', escuela.nombre); 
 console.log('escuela.paginaWeb', escuela.paginaWeb);
+
+//
+console.log('MisCursos', Curso.cursosDisponibles);
+console.log('CursoJS', Curso.getInfo(cursoJS));
