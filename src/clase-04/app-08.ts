@@ -1,8 +1,10 @@
 export {};
 
 // HERENCIA DE CLASES
-
 // MODiFICADORES DE ACCESO: PROTECTED
+// CLASES ABSTRACTAS 
+// ATRIBUTOS Y METODOS ESTATICOS
+
 class Curso {      
     constructor(private readonly _id: number, private readonly _nombre: string) {        
     }   
@@ -18,7 +20,8 @@ class Curso {
 }
 
 // superclase escuela
-class Escuela {
+abstract class Escuela { 
+    // al usar abstract el compilador ya no permite crear instancias de esta clase
     protected cursos: Curso[] = [];
 
     constructor(
@@ -47,6 +50,8 @@ class Escuela {
     agregarCurso(curso: Curso) {
         this.cursos.push(curso);
     }
+    // una funcion podria ser abstract
+
 
 
 
@@ -67,7 +72,7 @@ class EscuelaDigital extends Escuela {
     }
 
 }
-const miEscuela = new EscuelaDigital(1,'ED-team','ed.team'); // no tiene mucho sentido- clase abstracta
+// const miEscuela = new EscuelaDigital(1,'ED-team','ed.team'); // Clase abstracta
 const escuela = new EscuelaDigital(1,'EDteam1','ed.team');
 let cursoJS = new Curso(1,'JavaScript');
 let cursoTS = new Curso(2, 'TypeScript');

@@ -15,6 +15,7 @@ var __extends = (this && this.__extends) || (function () {
 Object.defineProperty(exports, "__esModule", { value: true });
 // HERENCIA DE CLASES
 // MODiFICADORES DE ACCESO: PROTECTED
+// CLASES ABSTRACTAS 
 var Curso = /** @class */ (function () {
     function Curso(_id, _nombre) {
         this._id = _id;
@@ -41,6 +42,7 @@ var Escuela = /** @class */ (function () {
     function Escuela(_id, _nombre) {
         this._id = _id;
         this._nombre = _nombre;
+        // al usar abstract el compilador ya no permite crear instancias de esta clase
         this.cursos = [];
     }
     Object.defineProperty(Escuela.prototype, "id", {
@@ -87,7 +89,7 @@ var EscuelaDigital = /** @class */ (function (_super) {
     });
     return EscuelaDigital;
 }(Escuela));
-var miEscuela = new EscuelaDigital(1, 'ED-team', 'ed.team'); // no tiene mucho sentido- clase abstracta
+// const miEscuela = new EscuelaDigital(1,'ED-team','ed.team'); // Clase abstracta
 var escuela = new EscuelaDigital(1, 'EDteam1', 'ed.team');
 var cursoJS = new Curso(1, 'JavaScript');
 var cursoTS = new Curso(2, 'TypeScript');
