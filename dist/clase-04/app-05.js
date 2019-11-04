@@ -4,12 +4,12 @@ Object.defineProperty(exports, "__esModule", { value: true });
 // ATRIBUTOS SOLO LECTURA -> readonly
 // GET Y SET
 var Curso = /** @class */ (function () {
+    //no vamos a poder modificar estas variables se coloca despues del modificador de acceso
     function Curso(_id, _nombre) {
         this._id = _id;
         this._nombre = _nombre;
     }
     Object.defineProperty(Curso.prototype, "id", {
-        //no vamos a poder modificar estas variables se coloca despues del modificador de acceso
         get: function () {
             // Permite obtener un valor
             return this._id;

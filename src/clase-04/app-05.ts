@@ -6,9 +6,9 @@ export {};
 
 class Curso {  
 
-    constructor(private readonly _id: number, private readonly _nombre: string){        
-    }
     //no vamos a poder modificar estas variables se coloca despues del modificador de acceso
+    constructor(private readonly _id: number, private readonly _nombre: string) {        
+    }   
     
     get id() {
         // Permite obtener un valor
@@ -37,7 +37,7 @@ class EscuelaDigital {
     private cursos: Curso[] = [];
 
     // funcion constructor para crear los objetos de la clase
-    constructor(private _nombre: string){        
+    constructor(private _nombre: string) {        
     }
 
     set nombre(nombre: string) {
@@ -50,7 +50,6 @@ class EscuelaDigital {
     agregarCurso(curso: Curso) {
         this.cursos.push(curso);
     }
-
 }
 
 
