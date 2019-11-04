@@ -47,7 +47,7 @@ escuela.agregarCurso(cursoTS);
 // Acceder a los atributos publicos
 cursoJS.nombre = 'JavaScript desde Cero'; // Asignacion: SET
 console.log('nombre cursoJS', cursoJS.nombre); // Leyendo: GET
-cursoJS.id = 20;
+cursoJS.id = 20; // asignacion SET
 
 console.log('escuela', escuela);
 // console.log('escuela.nombre', escuela.nombre); // es private

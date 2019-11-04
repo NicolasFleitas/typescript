@@ -1,5 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+// METODOS GET Y SET
+// ATRIBUTOS SOLO LECTURA -> readonly
 // GET Y SET
 var Curso = /** @class */ (function () {
     function Curso(_id, _nombre) {
@@ -7,17 +9,36 @@ var Curso = /** @class */ (function () {
         this._nombre = _nombre;
     }
     Object.defineProperty(Curso.prototype, "id", {
+        //no vamos a poder modificar estas variables se coloca despues del modificador de acceso
         get: function () {
             // Permite obtener un valor
             return this._id;
-        },
-        set: function (id) {
-            this._id = id;
         },
         enumerable: true,
         configurable: true
     });
     Object.defineProperty(Curso.prototype, "nombre", {
+        // las lineas "set" de abajo , ahora dara error porque no se pueden utilizar la asignacion
+        // en variables con atributos de solo lectura 
+        // set id(id: number) {
+        //     this._id = id;
+        // }
+        get: function () {
+            return this._nombre;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    return Curso;
+}());
+var EscuelaDigital = /** @class */ (function () {
+    // funcion constructor para crear los objetos de la clase
+    function EscuelaDigital(_nombre) {
+        this._nombre = _nombre;
+        //private nombre: string;
+        this.cursos = [];
+    }
+    Object.defineProperty(EscuelaDigital.prototype, "nombre", {
         get: function () {
             return this._nombre;
         },
@@ -27,14 +48,6 @@ var Curso = /** @class */ (function () {
         enumerable: true,
         configurable: true
     });
-    return Curso;
-}());
-var EscuelaDigital = /** @class */ (function () {
-    function EscuelaDigital(nombre) {
-        this.nombre = nombre;
-        // private nombre: string;
-        this.cursos = [];
-    }
     EscuelaDigital.prototype.agregarCurso = function (curso) {
         this.cursos.push(curso);
     };
@@ -46,8 +59,9 @@ var cursoTS = new Curso(2, 'TypeScript');
 escuela.agregarCurso(cursoJS);
 escuela.agregarCurso(cursoTS);
 // Acceder a los atributos publicos
-cursoJS.nombre = 'JavaScript desde Cero'; // Asignacion: SET
+// modo lectura
+// cursoJS.nombre = 'JavaScript desde Cero'; // Asignacion: SET
 console.log('nombre cursoJS', cursoJS.nombre); // Leyendo: GET
-cursoJS.id = 20; // asignacion SET
+//cursoJS.id = 20; // asignacion SET
 console.log('escuela', escuela);
-// console.log('escuela.nombre', escuela.nombre); // es private
+console.log('escuela.nombre', escuela.nombre); // es private
