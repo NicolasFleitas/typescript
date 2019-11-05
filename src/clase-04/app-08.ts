@@ -63,10 +63,6 @@ abstract class Escuela {
         this.cursos.push(curso);
     }
     // una funcion podria ser abstract
-
-
-
-
 }
 
 class EscuelaDigital extends Escuela {    
